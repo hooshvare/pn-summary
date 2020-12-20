@@ -1,4 +1,4 @@
-# Paper Article
+# Paper Title
 ...
 
 Paper presenting: arXiv:xxx.xxxx
