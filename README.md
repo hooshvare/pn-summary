@@ -8,6 +8,20 @@ Follow the rest of the repo for more detail.
 
 Paper link: [arXiv:2012.11204](https://arxiv.org/abs/2012.11204)
 
+**Table of contents**
+- [Leveraging ParsBERT and Pretrained mT5 for Persian Abstractive Text Summarization](#leveraging-parsbert-and-pretrained-mt5-for-persian-abstractive-text-summarization)
+  - [Introduction](#introduction)
+  - [Dataset Information](#dataset-information)
+  - [Access/Download Dataset](#accessdownload-dataset)
+    - [Download](#download)
+    - [Dataset Demonstration](#dataset-demonstration)
+    - [How to import](#how-to-import)
+  - [Evaluation](#evaluation)
+  - [Summarization Strategy](#summarization-strategy)
+  - [A Few Examples](#a-few-examples)
+  - [Citation](#citation)
+  - [Contributors](#contributors)
+  - [License](#license)
 
 ## Introduction
 Natural Language Processing (NLP) is a field of AI that focuses on processing textual information in order to make them comprehensible to computers. With the emergence of Deep Learning (DL), numerous DL-based models and architectures have been proposed for different NLP tasks such as Named Entity Recognition (NER), Sentiment Analysis (SA), and Question/Answering (QA). One of the most recent and most popular approaches towards these tasks is to use pre-trained language models. Pre-trained language models used for NLP tasks are essentially huge neural networks employing Long Short-Term Memory (LSTM) architecture that is trained on an enormous text corpus. A few examples include [BERT](https://arxiv.org/abs/1810.04805) and [T5](https://arxiv.org/abs/1910.10683) models. BERT is an encoder-only model that uses Masked Language Model (MLM) to create joint conditioning in the left and right context. T5 is a Sequence-to-Sequence (Seq2Seq) framework that creates a text-to-text format to address NLP tasks. However, regardless of the architecture, any pre-trained model has to be fine-tuned towards any of the NLP tasks using an appropriate dataset.
