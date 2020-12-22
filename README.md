@@ -146,7 +146,7 @@ Please cite the following paper in your publication if you are using our [datase
 ```bibtext
 @article{pnSummary,
   title={Leveraging ParsBERT and Pretrained mT5 for Persian Abstractive Text Summarization}, 
-  author={Mehrdad Farahani and Mohammad Gharachorloo and Mohammad Manthouri},
+  author={Mehrdad Farahani, Mohammad Gharachorloo, Mohammad Manthouri},
   year={2020},
   eprint={2012.11204},
   archivePrefix={arXiv},
