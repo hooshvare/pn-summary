@@ -60,16 +60,7 @@ Beam search method tries to maximize the word sequence probability by considerin
 
 ## A Few Examples
 In this section, we have included a few examples from the results of the models presented in our paper. To make these examples more comprehendable, we have included both Persian and English versions of the example texts in the table below.
-<style type="text/css">
-.tg  {border-collapse:collapse;border-color:#93a1a1;border-spacing:0;}
-.tg td{background-color:#fdf6e3;border-color:#93a1a1;border-style:solid;border-width:1px;color:#002b36;
-  font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg th{background-color:#657b83;border-color:#93a1a1;border-style:solid;border-width:1px;color:#fdf6e3;
-  font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
-.tg .tg-lduz{border-color:#002b36;text-align:center;vertical-align:top}
-.tg .tg-d8bh{border-color:#002b36;text-align:left;vertical-align:top}
-</style>
+
 <table class="tg">
 <thead>
   <tr>
