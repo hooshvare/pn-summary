@@ -82,6 +82,9 @@ In the following table, you can a few examples of our dataset.
 
 ### How to import
 ```python
+import pandas as pd
+
+
 train = pd.read_csv('pn-summary/train.csv', sep="\t")
 print(train.shape)
 
