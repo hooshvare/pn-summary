@@ -42,8 +42,19 @@ The models proposed to be used for Persian summary generation in our work are mT
 | B2B with ParsBERT | __44.01__ | __25.07__ | __37.76__ |
 |        mT5        |   42.25   |   24.36   | 35.94     |
 
-## Decoding and A Few Examples
+As it can be seen from the table above, the ParsBERT-based BERT2BERT outperforms the mT5 model. This may be due to the fact that ParsBERT, unlike mT5, is a monolingual BERT model that has exclusively been trained over a very large Persian text corpus, thus, capable of absorbing the Persian textual information in a more efficient way.
+
+## Decoding Strategy
 After the models are fine-tuned on the pn-summary dataset, a decoding strategy should be deployed to put the model into use to actually generate summaries. There are different decoding techniques such as _greedy searcg_ and _beam search_. In our work we have used the beam search method to generate summaries after fine tuning our models. 
+
+Beam search method tries to maximize the word sequence probability by considering multiple possible sequences (beams) and choosing the one that results in greater conditional next word probability product. This is to avoid highly probable words being neglected only because they are stuck behind a low probability word. To prevent beam search from generating the sequences with repetitive words, we have used n-grams penalties. The overall beam search configuration used in our work is outlined in the table below. In this table the early stopping indicates whether the beam search algorithm should stop when when all beams rach EOS token.
+
+|                        | BERT2BERT |   mT5  |
+|:----------------------:|:---------:|:------:|
+|     Number of Beams    |     3     |    4   |
+| Repetitive N-gram Size |     2     |    3   |
+|     Length Penalty     |     2     |    1   |
+|     Early Stopping     |   ACTIVE  | ACTIVE |
 
 ## Citation
 ...
