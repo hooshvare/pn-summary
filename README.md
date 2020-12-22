@@ -16,7 +16,9 @@ In this repository, a novel and well structured dataset for Persian text summari
 ## Dataset Information
 The pn-summary dataset is composed of numerous articles of various categories that have been crawled from six news agency websites. The number of articles per news agency is depicted in figure 1. The total number of articles is 93,207.
 
-![Number of articles per news agency.](/assets/news_agencies.png)
+![Amazon Rainforest](/path/to/image)
+
+{{< caption >}}The [Amazon Rainforest](https://en.wikipedia.org/wiki/Amazon_rainforest) contains a multitude of species and is vital to the Earth's survival.{{< /caption >}}
 
 ## Evaluation
 ...
