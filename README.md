@@ -127,7 +127,7 @@ In this section, we have included a few examples from the results of the models 
 As shown from the table above, the summaries are given by ParsBERT driven BERT2BERT model are quite closer to the actual summary in terms of both meaning and lexical choices.
  
 ## Citation
-Please cite the following paper in your publication if you are using our [this dataset and architectures](https://arxiv.org/abs/2012.11204) in your research:
+Please cite the following paper in your publication if you are using our [dataset and architectures](https://arxiv.org/abs/2012.11204) in your research:
 
 ```bibtext
 @article{pnSummary,
