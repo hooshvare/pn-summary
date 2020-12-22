@@ -27,7 +27,23 @@ Summaries included in each article have variable lengths. As shown in the next f
 <img src='/assets/summary_tokens.png' width="50%" height="50%"/>
 
 ## Evaluation
-...
+To evaluate the performance of any model trained on pn-summary dataset, we suggest Google's ROUGE (Recall-Oriented Understudy for Gisting Evaluation) metric package. ROUGE metric package is widely used automatic text summarization and machine translation evaluation. The metrics compare the generated summary with the original summary included in the article (document). Therefore, to establish the performance of any text summarization model, one can calculate the F-1 score for these metrics.
+
+In our most recent work ###, which is the first work to address Persian text summarization from an abstractive point-of-view, we have reported the results of fine-tuning two models on the current dataset in terms of three ROUGE metrics:
+
+1. __ROUGE-1 (unigram) scoring__: which computes the unigrams' overlap between the generated and the original summary.
+2. __ROUGE-2 (bigram) scoring__: which computes the bigrams' overlap between the generated and the original summary.
+3. __ROUGE-L scoring__: which computes the Longest Common Subsequence (LCS) between the the generated and the original summary. In this metrics scores are sentence-level and new lines are neglected.
+
+The models proposed to be used for Persian summary generation in our work are mT5 ### (a multilingual version of the T5 model) and a BERT2BERT ### structure warm-started with ParsBERT model's weights ###. This is the very first work ever that have used the pn-summary dataset. Therefore, results reported in this work can be used as a baseline for any future work in this field that uses the pn-summary dataset. The results obtained by these models on the pn-summary dataset are presented in the table below:
+
+|                   |  ROUGE-1  |  ROUGE-2  | ROUGE-L   |
+|:-----------------:|:---------:|:---------:|-----------|
+| B2B with ParsBERT | __44.01__ | __25.07__ | __37.76__ |
+|        mT5        |   42.25   |   24.36   | 35.94     |
+
+## Decoding and A Few Examples
+After the models are fine-tuned on the pn-summary dataset, a decoding strategy should be deployed to put the model into use to actually generate summaries. There are different decoding techniques such as _greedy searcg_ and _beam search_. In our work we have used the beam search method to generate summaries after fine tuning our models. 
 
 ## Citation
 ...
