@@ -2,6 +2,7 @@
 
 
 Paper presenting: arXiv:2012.11204
+
 Paper link: https://arxiv.org/pdf/2012.11204.pdf
 
 
@@ -15,7 +16,7 @@ In this repository, a novel and well structured dataset for Persian text summari
 ## Dataset Information
 The pn-summary dataset is composed of numerous articles of various categories that have been crawled from six news agency websites. The number of articles per news agency is depicted in figure 1. The total number of articles is 93,207.
 
-{% include image.html img="assets/news_agencies.png" title="" caption="1. The number of articles per news agency." %}
+![Number of articles per news agency.](/assets/news_agencies.png)
 
 ## Evaluation
 ...
