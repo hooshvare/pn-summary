@@ -77,7 +77,7 @@ You can download the pn-summary from the following table.
 
 | Versions 	| Train 	| Validation 	| Test 	| All-In-One 	|
 |:-:	|:-:	|:-:	|:-:	|:-:	|
-| v1.0.0 	| (82022, 8) 	| (5592, 8) 	| (5593, 8) 	| [Download](http://bit.ly/pn-summary) 	|
+| v1.0.0 	| (82022, 8) 	| (5592, 8) 	| (5593, 8) 	| [Download](https://drive.google.com/uc?id=19OKt5TqSC9JSF66b9Dv2LwHOFFbrLB7j) 	|
 
 ### Dataset Demonstration
 In the following table, you can a few examples of our dataset.
