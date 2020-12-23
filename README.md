@@ -8,6 +8,13 @@ Follow the rest of the repo for more detail.
 
 Paper link: [arXiv:2012.11204](https://arxiv.org/abs/2012.11204)
 
+
+<p align="center">
+    <a href="https://youtu.be/D7lwnf4G4ss"><img src="assets/demo-youtube.png" height="500"></a>
+    <br>
+    <em>YouTube Demo !</em>
+</p>
+
 **Table of contents**
 - [Leveraging ParsBERT and Pretrained mT5 for Persian Abstractive Text Summarization](#leveraging-parsbert-and-pretrained-mt5-for-persian-abstractive-text-summarization)
   - [Introduction](#introduction)
@@ -119,7 +126,7 @@ The models proposed to be used for Persian summary generation in our work are [m
 |                   |  ROUGE-1  |  ROUGE-2  | ROUGE-L   |
 |:-----------------:|:---------:|:---------:|-----------|
 | B2B with ParsBERT | **44.01** | **25.07** | **37.76** |
-|        mT5        |   42.25   |   24.36   | 35.94     |
+|     mT5-small     |   42.25   |   24.36   | 35.94     |
 
 As it can be seen from the table above, the ParsBERT-based BERT2BERT outperforms the mT5 model. This may be because ParsBERT, unlike mT5, is a monolingual BERT model that has exclusively been trained over a vast Persian text corpus capable of absorbing the Persian textual information more efficiently.
 
