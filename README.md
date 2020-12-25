@@ -1,5 +1,5 @@
 # Leveraging ParsBERT and Pretrained mT5 for Persian Abstractive Text Summarization
-This repo presented a well-structured summarization dataset for the Persian language (like CNN, Daily News, ...). Also, this dataset covers 18 different news categories, which can be used for Text Classification. Furthermore, we tested out this dataset on novel models and techniques.
+A well-structured summarization dataset for the Persian language consists of 93,207 records. It is prepared for Abstractive/Extractive tasks (like [cnn_dailymail](https://cs.nyu.edu/~kcho/DMQA/) for English). It can also be used in other scopes like Text Generation, Title Generation, and News Category Classification. Moreover, we tested out this dataset on novel models and techniques.
 
 - mT5: A pretrained encoder-decoder model
 - BERT2BERT: A leveraging ParsBERT model as an encoder-decoder architecture.
@@ -23,7 +23,11 @@ Paper link: [arXiv:2012.11204](https://arxiv.org/abs/2012.11204)
     - [Download](#download)
     - [Dataset Demonstration](#dataset-demonstration)
     - [How to import](#how-to-import)
+      - [Singly](#singly)
+      - [All-in-One](#all-in-one)
   - [Evaluation](#evaluation)
+    - [Google's ROUGE / HuggingFace's ROUGE Metric for Persian](#googles-rouge--huggingfaces-rouge-metric-for-persian)
+    - [Results](#results)
   - [Summarization Strategy](#summarization-strategy)
   - [A Few Examples](#a-few-examples)
   - [Citation](#citation)
@@ -88,17 +92,61 @@ In the following table, you can a few examples of our dataset.
 | 2 	| 00fa692a17 ... 	| سبد محصولات پتروشیمی متنوع می‌شود 	| به گزارش شانا به نقل از شرکت ملی صنایع پتروشیمی، علی‌اصغر گودرزی‌فراهانی با اشاره به اینکه همه طرح‌های در حال اجرای صنعت پتروشیمی براساس پیشرفت فیزیکی و پیش‌بینی زمان راه‌اندازی در قالب طرح‌های جهش دوم و سوم تقسیم‌بندی شده‌اند، اظهار کرد: انتظار داریم که طرح‌های جهش دوم صنعت پتروشیمی که پیشرفت‌های (...)          	| سرپرست مدیریت برنامه‌ریزی و توسعه شرکت ملی صنایع پتروشیمی گفت: تنوع محصولات پتروشیمی ایران با بهره‌برداری از طرح‌های جهش دوم و سوم صنعت پتروشیمی افزایش می‌یابد.    	| Oil-Energy 	| پتروشیمی 	| Shana 	| https://www.shana.ir ... 	|
 
 ### How to import
+#### Singly
+
+Downloading: Type in your terminal.
+
+```bash
+# train.csv
+gdown https://drive.google.com/uc?id=1WDruZF5-bgMlZ_EeTVD9g4hANPDCGmGd
+# dev.csv
+gdown https://drive.google.com/uc?id=1wogZzsncO7TJ-4uzjy218EmnzsmygtFy
+# test.csv
+gdown https://drive.google.com/uc?id=1k-CRCf2iMgFtl-nklTj7vv3-NtQbsqOO
+```
+
+Loading: Type in your notebook or script.
 ```python
 import pandas as pd
 
 
-train = pd.read_csv('pn-summary/train.csv', sep="\t")
+train = pd.read_csv('pn-summary-train.csv', sep="\t")
 print(train.shape)
 
-dev = pd.read_csv('pn-summary/dev.csv', sep="\t")
+dev = pd.read_csv('pn-summary-dev.csv', sep="\t")
 print(dev.shape)
 
-test = pd.read_csv('pn-summary/test.csv', sep="\t")
+test = pd.read_csv('pn-summary-test.csv', sep="\t")
+print(test.shape) 
+
+>>> (82022, 8)
+>>> (5592, 8)
+>>> (5593, 8)
+```
+
+#### All-in-One
+
+Downloading: Type in your terminal.
+
+```bash
+# download pn_summary.zip
+gdown https://drive.google.com/uc?id=11wz8cKuTfGpNWIgRypD3rUmpaBeYU4NL
+# extract pn_summary
+unzip pn_summary.zip
+```
+
+Loading: Type in your notebook or script.
+```python
+import pandas as pd
+
+
+train = pd.read_csv('pn_summary/train.csv', sep="\t")
+print(train.shape)
+
+dev = pd.read_csv('pn_summary/dev.csv', sep="\t")
+print(dev.shape)
+
+test = pd.read_csv('pn_summary/test.csv', sep="\t")
 print(test.shape) 
 
 >>> (82022, 8)
@@ -115,12 +163,14 @@ In our most recent work [arXiv:2012.11204](https://arxiv.org/abs/2012.11204), wh
 2. **ROUGE-2 (bigram) scoring:** which computes the bigrams' overlap between the generated and the original summary.
 3. **ROUGE-L scoring:** which computes the Longest Common Subsequence (LCS) between the the generated and the original summary. In this metrics scores are sentence-level and new lines are neglected.
 
-ROUGE by default does not support the PErsian language. Therefore, we have also created an extension to these metrics to further support the Persian language. This extension is available [from here](https://github.com/hooshvare/pn-summary/tree/main/scripts).
+### Google's ROUGE / HuggingFace's ROUGE Metric for Persian
+ROUGE by default does not support the Persian language. Therefore, we have also created an extension to these metrics to further support the Persian language. This extension is available [from here](https://github.com/hooshvare/pn-summary/tree/main/scripts).
 
 |  	| Title 	| Notebook 	|
 |-	|-	|-	|
 | 1 	| Google Rouge / HuggingFace Metric for Persian 	| [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/hooshvare/pn-summary/blob/master/notebooks/How_To_Use_Rouge_Metric_Persian.ipynb) 	|
 
+### Results
 The models proposed to be used for Persian summary generation in our work are [mT5](https://arxiv.org/abs/2010.11934) (a multilingual version of the T5 model) and a [BERT2BERT](https://arxiv.org/abs/1907.12461) structure warm-started with [ParsBERT](https://arxiv.org/abs/2012.11204) model's weights. This is the very first work ever that has used the pn-summary dataset. Therefore, the results reported in this work can be used as a baseline for any future work in this field that uses the pn-summary dataset. The results obtained by these models on the pn-summary dataset are presented in the table below:
 
 |                   |  ROUGE-1  |  ROUGE-2  | ROUGE-L   |
