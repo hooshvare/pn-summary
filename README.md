@@ -81,7 +81,7 @@ You can download the pn-summary from the following table.
 
 | Versions 	| Train 	| Validation 	| Test 	| All-In-One 	|
 |:-:	|:-:	|:-:	|:-:	|:-:	|
-| v1.0.0 	| [(82022, 8)](https://drive.google.com/uc?id=1WDruZF5-bgMlZ_EeTVD9g4hANPDCGmGd) 	| [(5592, 8)](https://drive.google.com/uc?id=1wogZzsncO7TJ-4uzjy218EmnzsmygtFy) 	| [(5593, 8)](https://drive.google.com/uc?id=1k-CRCf2iMgFtl-nklTj7vv3-NtQbsqOO) 	| [Download](https://drive.google.com/uc?id=11wz8cKuTfGpNWIgRypD3rUmpaBeYU4NL) 	|
+| v1.0.0 	| [(82022, 8)](https://drive.google.com/uc?id=10tJIalmf6hWRBbQxZeOUJ0SrvN-Pm12N) 	| [(5592, 8)](https://drive.google.com/uc?id=1_5pejIDMx6O2-HsWceg8zA5A8HvrYctI) 	| [(5593, 8)](https://drive.google.com/uc?id=1D8icpwL9Oti-3EVrlCUnbPJivYGd4J5D) 	| [Download](https://drive.google.com/uc?id=16OgJ_OrfzUF_i3ftLjFn9kpcyoi7UJeO) 	|
 
 ### Dataset Demonstration
 In the following table, you can a few examples of our dataset.
@@ -98,11 +98,11 @@ Downloading: Type in your terminal.
 
 ```bash
 # train.csv
-gdown https://drive.google.com/uc?id=1WDruZF5-bgMlZ_EeTVD9g4hANPDCGmGd
+gdown https://drive.google.com/uc?id=10tJIalmf6hWRBbQxZeOUJ0SrvN-Pm12N
 # dev.csv
-gdown https://drive.google.com/uc?id=1wogZzsncO7TJ-4uzjy218EmnzsmygtFy
+gdown https://drive.google.com/uc?id=1_5pejIDMx6O2-HsWceg8zA5A8HvrYctI
 # test.csv
-gdown https://drive.google.com/uc?id=1k-CRCf2iMgFtl-nklTj7vv3-NtQbsqOO
+gdown https://drive.google.com/uc?id=1D8icpwL9Oti-3EVrlCUnbPJivYGd4J5D
 ```
 
 Loading: Type in your notebook or script.
@@ -111,12 +111,18 @@ import pandas as pd
 
 
 train = pd.read_csv('pn-summary-train.csv', sep="\t")
+train["article"] = train["article"].apply(lambda t: t.replace("[n]", "\n"))
+train["summary"] = train["summary"].apply(lambda t: t.replace("[n]", "\n"))
 print(train.shape)
 
 dev = pd.read_csv('pn-summary-dev.csv', sep="\t")
+dev["article"] = dev["article"].apply(lambda t: t.replace("[n]", "\n"))
+dev["summary"] = dev["summary"].apply(lambda t: t.replace("[n]", "\n"))
 print(dev.shape)
 
 test = pd.read_csv('pn-summary-test.csv', sep="\t")
+test["article"] = test["article"].apply(lambda t: t.replace("[n]", "\n"))
+test["summary"] = test["summary"].apply(lambda t: t.replace("[n]", "\n"))
 print(test.shape) 
 
 >>> (82022, 8)
@@ -141,12 +147,18 @@ import pandas as pd
 
 
 train = pd.read_csv('pn_summary/train.csv', sep="\t")
+train["article"] = train["article"].apply(lambda t: t.replace("[n]", "\n"))
+train["summary"] = train["summary"].apply(lambda t: t.replace("[n]", "\n"))
 print(train.shape)
 
 dev = pd.read_csv('pn_summary/dev.csv', sep="\t")
+dev["article"] = dev["article"].apply(lambda t: t.replace("[n]", "\n"))
+dev["summary"] = dev["summary"].apply(lambda t: t.replace("[n]", "\n"))
 print(dev.shape)
 
 test = pd.read_csv('pn_summary/test.csv', sep="\t")
+test["article"] = test["article"].apply(lambda t: t.replace("[n]", "\n"))
+test["summary"] = test["summary"].apply(lambda t: t.replace("[n]", "\n"))
 print(test.shape) 
 
 >>> (82022, 8)
