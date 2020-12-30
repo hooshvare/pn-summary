@@ -92,6 +92,13 @@ In the following table, you can a few examples of our dataset.
 | 2 	| 00fa692a17 ... 	| سبد محصولات پتروشیمی متنوع می‌شود 	| به گزارش شانا به نقل از شرکت ملی صنایع پتروشیمی، علی‌اصغر گودرزی‌فراهانی با اشاره به اینکه همه طرح‌های در حال اجرای صنعت پتروشیمی براساس پیشرفت فیزیکی و پیش‌بینی زمان راه‌اندازی در قالب طرح‌های جهش دوم و سوم تقسیم‌بندی شده‌اند، اظهار کرد: انتظار داریم که طرح‌های جهش دوم صنعت پتروشیمی که پیشرفت‌های (...)          	| سرپرست مدیریت برنامه‌ریزی و توسعه شرکت ملی صنایع پتروشیمی گفت: تنوع محصولات پتروشیمی ایران با بهره‌برداری از طرح‌های جهش دوم و سوم صنعت پتروشیمی افزایش می‌یابد.    	| Oil-Energy 	| پتروشیمی 	| Shana 	| https://www.shana.ir ... 	|
 
 ### How to import
+Before getting into this part, please download `gdown` and `pandas` packages.
+
+```bash
+pip install -qU gdown
+pip install -qU pandas
+```
+
 #### Singly
 
 Downloading: Type in your terminal.
@@ -136,7 +143,7 @@ Downloading: Type in your terminal.
 
 ```bash
 # download pn_summary.zip
-gdown https://drive.google.com/uc?id=11wz8cKuTfGpNWIgRypD3rUmpaBeYU4NL
+gdown https://drive.google.com/uc?id=16OgJ_OrfzUF_i3ftLjFn9kpcyoi7UJeO
 # extract pn_summary
 unzip pn_summary.zip
 ```
