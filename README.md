@@ -25,6 +25,7 @@ Paper link: [arXiv:2012.11204](https://arxiv.org/abs/2012.11204)
     - [How to import](#how-to-import)
       - [Singly](#singly)
       - [All-in-One](#all-in-one)
+      - [HuggingFace Datasets](#huggingface-datasets)
   - [Evaluation](#evaluation)
     - [Google's ROUGE / HuggingFace's ROUGE Metric for Persian](#googles-rouge--huggingfaces-rouge-metric-for-persian)
     - [Results](#results)
@@ -172,6 +173,28 @@ print(test.shape)
 >>> (5592, 8)
 >>> (5593, 8)
 ```
+
+#### HuggingFace Datasets
+
+First, you need to install `datasets` use this command in your terminal:
+
+```bash
+pip install -qU datasets
+```
+
+Then import `pn_summary` dataset using `load_dataset`:
+
+```python
+from datasets import load_dataset
+
+
+data = load_dataset("pn_summary")
+```
+
+Or you can access the whole demonstration using this notebook:
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/hooshvare/pn-summary/blob/master/notebooks/HuggingFace_Datasets_Persian_Summarization.ipynb)
+
 
 ## Evaluation
 To evaluate the performance of any model trained on the `pn-summary` dataset, we suggest [Google's ROUGE](https://www.aclweb.org/anthology/W04-1013/) (Recall-Oriented Understudy for Gisting Evaluation) metric package. ROUGE metric package is a widely used automatic text summarization and machine translation evaluation. The metrics compare the generated summary with the original summary included in the article (document). Therefore, to establish the performance of any text summarization model, one can calculate the <img src="https://render.githubusercontent.com/render/math?math=F_{1}" /> score for these metrics.
