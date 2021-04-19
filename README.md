@@ -235,8 +235,8 @@ The models proposed to be used for Persian summary generation in our work are [m
 
 |                   |  ROUGE-1  |  ROUGE-2  | ROUGE-L   |
 |:-----------------:|:---------:|:---------:|-----------|
-| B2B with ParsBERT | **44.01** | **25.07** | **37.76** |
-|     mT5-small     |   42.25   |   24.36   | 35.94     |
+| B2B with ParsBERT | **43.99** | **25.10** | **37.73** |
+|     mT5-small     |   42.25   |   24.36   |   35.96   |
 
 </div>
 
@@ -249,8 +249,8 @@ The models proposed to be used for Persian summary generation in our work are [m
 
 |   Models  |  ROUGE-1  |  ROUGE-2  |  ROUGE-L  |
 |:---------:|:---------:|:---------:|:---------:|
-| mT5-small |   45.63   |   26.68   |   39.15   |
-|  mT5-base |   49.39   |   29.97   |   42.85   |
+| mT5-small |   42.87   |   25.04   |   36.82   |
+|  mT5-base |   45.91   |   27.84   |   39.90   |
 | BERT2BERT |   00.00   |   00.00   |   00.00   |
 
 </div>
