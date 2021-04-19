@@ -80,17 +80,25 @@ A word-cloud of the most frequent words inside pn-summary dataset can be seen in
 ### Download
 You can download the pn-summary from the following table.
 
+<div align="center">
+
 | Versions 	| Train 	| Validation 	| Test 	| All-In-One 	|
 |:-:	|:-:	|:-:	|:-:	|:-:	|
 | v1.0.0 	| [(82022, 8)](https://drive.google.com/uc?id=10tJIalmf6hWRBbQxZeOUJ0SrvN-Pm12N) 	| [(5592, 8)](https://drive.google.com/uc?id=1_5pejIDMx6O2-HsWceg8zA5A8HvrYctI) 	| [(5593, 8)](https://drive.google.com/uc?id=1D8icpwL9Oti-3EVrlCUnbPJivYGd4J5D) 	| [Download](https://drive.google.com/uc?id=16OgJ_OrfzUF_i3ftLjFn9kpcyoi7UJeO) 	|
 
+</div>
+
 ### Dataset Demonstration
 In the following table, you can a few examples of our dataset.
+
+<div align="center">
 
 |  	| id 	| title 	| article 	| summary 	| category 	| categories 	| network 	| link 	|
 |-	|-	|-	|-	|-	|-	|-	|-	|-	|
 | 1 	| 738e296491f ... 	| مدیریت فروش نفت در دوران تحریم هوشمندانه عمل کرد 	| به گزارش شانا، علی کاردر امروز (۲۷ دی ماه) در مراسم تودیع محسن قمصری، مدیر سابق امور بین الملل شرکت ملی نفت ایران و معارفه سعید خوشرو، مدیر جدید امور بین الملل این شرکت، گفت: مدیریت امور بین‎الملل به عنوان یکی از تاثیرگذارترین مدیریت‌های شرکت ملی نفت ایران در دوران تحریم‌های ظالمانه غرب علیه کشورمان بسیار هوشمندانه عمل کرد و ما توانستیم به خوبی از عهده تحریم‌ها برآییم (...)    	| مدیرعامل شرکت ملی نفت، عملکرد مدیریت امور بین‎الملل این شرکت را در دوران تحریم بسیار هوشمندانه خواند و گفت: امور بین الملل در دوران پس از تحریم‎ها نیز می‌تواند نقش بزرگی در تسریع روند توسعه داشته باشد.   	| Oil-Energy 	| نفت 	| Shana 	| https://www.shana.ir/ ... 	|
 | 2 	| 00fa692a17 ... 	| سبد محصولات پتروشیمی متنوع می‌شود 	| به گزارش شانا به نقل از شرکت ملی صنایع پتروشیمی، علی‌اصغر گودرزی‌فراهانی با اشاره به اینکه همه طرح‌های در حال اجرای صنعت پتروشیمی براساس پیشرفت فیزیکی و پیش‌بینی زمان راه‌اندازی در قالب طرح‌های جهش دوم و سوم تقسیم‌بندی شده‌اند، اظهار کرد: انتظار داریم که طرح‌های جهش دوم صنعت پتروشیمی که پیشرفت‌های (...)          	| سرپرست مدیریت برنامه‌ریزی و توسعه شرکت ملی صنایع پتروشیمی گفت: تنوع محصولات پتروشیمی ایران با بهره‌برداری از طرح‌های جهش دوم و سوم صنعت پتروشیمی افزایش می‌یابد.    	| Oil-Energy 	| پتروشیمی 	| Shana 	| https://www.shana.ir ... 	|
+
+</div>
 
 ### How to import
 Before getting into this part, please download `gdown` and `pandas` packages.
@@ -208,17 +216,45 @@ In our most recent work [arXiv:2012.11204](https://arxiv.org/abs/2012.11204), wh
 ### Google's ROUGE / HuggingFace's ROUGE Metric for Persian
 ROUGE by default does not support the Persian language. Therefore, we have also created an extension to these metrics to further support the Persian language. This extension is available [from here](https://github.com/hooshvare/pn-summary/tree/main/scripts).
 
+<div align="center">
+
 |  	| Title 	| Notebook 	|
 |-	|-	|-	|
 | 1 	| Google Rouge / HuggingFace Metric for Persian 	| [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/hooshvare/pn-summary/blob/master/notebooks/How_To_Use_Rouge_Metric_Persian.ipynb) 	|
 
+</div>
+
 ### Results
 The models proposed to be used for Persian summary generation in our work are [mT5](https://arxiv.org/abs/2010.11934) (a multilingual version of the T5 model) and a [BERT2BERT](https://arxiv.org/abs/1907.12461) structure warm-started with [ParsBERT](https://arxiv.org/abs/2012.11204) model's weights. This is the very first work ever that has used the pn-summary dataset. Therefore, the results reported in this work can be used as a baseline for any future work in this field that uses the pn-summary dataset. The results obtained by these models on the pn-summary dataset are presented in the table below:
+
+<p align="center">
+    <em>Version 1.0</em>
+    <br>
+</p>
+<div align="center">
 
 |                   |  ROUGE-1  |  ROUGE-2  | ROUGE-L   |
 |:-----------------:|:---------:|:---------:|-----------|
 | B2B with ParsBERT | **44.01** | **25.07** | **37.76** |
 |     mT5-small     |   42.25   |   24.36   | 35.94     |
+
+</div>
+
+
+<p align="center">
+    <em>Version 2.0</em>
+    <br>
+</p>
+<div align="center">
+
+|   Models  |  ROUGE-1  |  ROUGE-2  |  ROUGE-L  |
+|:---------:|:---------:|:---------:|:---------:|
+| mT5-small |   45.63   |   26.68   |   39.15   |
+|  mT5-base |   49.39   |   29.97   |   42.85   |
+| BERT2BERT |   00.00   |   00.00   |   00.00   |
+
+</div>
+
 
 As it can be seen from the table above, the ParsBERT-based BERT2BERT outperforms the mT5 model. This may be because ParsBERT, unlike mT5, is a monolingual BERT model that has exclusively been trained over a vast Persian text corpus capable of absorbing the Persian textual information more efficiently.
 
@@ -227,6 +263,9 @@ After the models are fine-tuned on the pn-summary dataset, a summarization strat
 
 The beam search method tries to maximize the word sequence probability by considering multiple possible sequences (beams) and choosing the one that results in a greater conditional next word probability product. This is to avoid highly probable words being neglected only because they are stuck behind a low probability word. To prevent beam search from generating the sequences with repetitive words, we have used n-grams penalties. The overall beam search configuration used in our work is outlined in the table below. In this table, the early stopping indicates whether the beam search algorithm should stop when all beams reach the EOS token.
 
+
+<div align="center">
+
 |                        | BERT2BERT |   mT5  |
 |:----------------------:|:---------:|:------:|
 |     Number of Beams    |     3     |    4   |
@@ -234,15 +273,19 @@ The beam search method tries to maximize the word sequence probability by consid
 |     Length Penalty     |     2     |    1   |
 |     Early Stopping     |   ACTIVE  | ACTIVE |
 
+</div>
 
 ## A Few Examples
 In this section, we have included a few examples from the results of the models presented in our paper. To make these examples more comprehensible, we have included both Persian and English versions of the example texts in the table below.
+
+<div align="center">
 
 | # 	| Article - True Summary<br>Persian / English 	| BERT2BERT<br>Persian / English 	| mT5<br>Persian / English 	|
 |:-:	|-:	|:-:	|:-:	|
 | [1bd ...](https://www.irna.ir/news/84124380/%D9%85%D8%A7%D8%B1%D8%A7%D8%AF%D9%88%D9%86%D8%A7-%D8%AF%D8%B1-%DA%A9%D8%A7%D8%AE-%D8%B1%DB%8C%D8%A7%D8%B3%D8%AA-%D8%AC%D9%85%D9%87%D9%88%D8%B1%DB%8C-%D8%A2%D8%B1%DA%98%D8%A7%D9%86%D8%AA%DB%8C%D9%86-%D8%A8%D9%87-%D8%AE%D8%A7%DA%A9-%D8%B3%D9%BE%D8%B1%D8%AF%D9%87-%D9%85%DB%8C-%D8%B4%D9%88%D8%AF) 	| متن مقاله: به گزارش ایرنا، اسطوره تمام نشدنی آلبی سلسته شب گذشته (چهارشنبه) بر اثر حمله قلبی در ۶۰ سالگی چشم از جهان فرو بست. براساس اعلام خبرگزاری فرانسه و به نقل از ماریو هاک سخنگوی رییس جمهوری آرژانتین، پیکر مارادونا در کاخ کاسا روسادا به خاک سپرده خواهد شد تا عموم مردم بتوانند در فاصله روزهای پنجشنبه تا شنبه به قهرمان ورزشی خود ادای احترام کنند.<br>خلاصه مقاله:<br>دفتر رییس جمهوری آرژانتین اعلام کرد که پیکر دیگو مارادونا اسطوره فوتبال این کشور در کاخ ریاست جمهوری آرژانتین در بوئنوس آیرس به خاک سپرده خواهد شد.<br><br>Artice: As reported by IRNA, the all time Argentinian soccer legend died at 60, on Wednesday night, due to heart attack. Quoted by Mario Hawk, Spokesman for the President of Argentina, Maradona's body will be burried at Casa de Rosada so that everyone can pay tribute to this sports hero in between days Thursday to Saturday.<br>Summary: It has been announced by the Argentina's presendtial office that Diego Maradona, Argentinian Soccer legend, will be burried at Argentine Presidential Palace in Buenos Aires.  	| براساس گزارش رسانه‌های ارژانتین دیگو مارادونا اسطوره فوتبال ارژانتین بر اثر ابتلا به سرطان چشم از جهان فرو بست.<br><br>According to Argentinian press media, Diego Maradona, Argentinian soccer legend, passed away due to cancer. 	| فوق ستاره اسبق تیم ملی آرژانتین پس از حمله قلبی در ۶۰ سالگی چشم از جهان فرو بست.<br><br>Former Argentinian soccer super-star, died at 60. 	|
 | [d0c ...](https://www.shana.ir/news/284594/%D8%A7%D8%B3%D8%AA%D9%85%D8%B1%D8%A7%D8%B1-%D8%A8%DB%8C-%D8%AB%D8%A8%D8%A7%D8%AA%DB%8C-%D8%AF%D8%B1-%D8%A8%D8%A7%D8%B2%D8%A7%D8%B1-%D9%86%D9%81%D8%AA-%D8%A8%D9%87-%D8%AF%D9%84%DB%8C%D9%84-%D8%B3%DB%8C%D8%A7%D8%B3%D8%AA-%D9%87%D8%A7%DB%8C-%D8%AA%D8%B1%D8%A7%D9%85%D9%BE) 	| متن خبر:‌ به گزارش خبرگزاری رویترز از نیویورک، قیمت شاخص نفت خام برنت دیروز پس از جهش اولیه، سرانجام ۹ سنت کاهش یافت و به ۷۸ دلار و ۹ سنت به ازای هر بشکه رسید. با این حال، قیمت شاخص نفت خام دبلیو‌تی‌آی آمریکا با ۴۰ سنت رشد، به ۶۸ دلار و ۹۹ سنت برای هر بشکه رسید (...)<br><br>خلاصه خبر: نگرانی درباره جنگ تجاری آمریکا و چین از یک سو و نگرانی درباره تحریم‌های ترامپ ضد ایران از سوی دیگر سبب شد قیمت نفت در معاملات دیروز (جمعه، ۲۴ شهریورماه) نوسان زیادی را تجربه کند.<br><br>Artice: Brent crude oil price index drops 9 cent after rudimentary jump, reaching 78 dollars and 9 cents per barrel, Reuteurs reports from New York. Nonetheless, U.S. WTI crude oil price index reached 68 dollars and 99 cents after 40 cents increase (...)<br><br>Summary: Concerns about Commercial fairies between the U.S. and China from one hand, and Trump's sanctions against Iran from the other, caused great fluctuations in yesterday's oil prices. 	| قیمت شاخص نفت خام برنت دیروز پس از جهش اولیه، سرانجام ۹ سنت کاهش یافت و به ۷۸ دلار و ۹ سنت رسید.<br><br>Brent crude oil price index plunged by 9 cents after primitive rise, reaching 78 dollars and 9 cents. 	| افزایش شمار دکل‌های حفاری در امریکا سبب شد قیمت نفت در معاملات دیروز ( دوشنبه ۲۲ اردیبهشت‌ماه ) کاهش یابد.<br><br>The increasing number of drilling rigs in the U.S. caused a plunge in Monday's trades. 	|
 
+</div>
 
 As shown from the table above, the summaries are given by ParsBERT driven BERT2BERT model are quite closer to the actual summary in terms of both meaning and lexical choices.
  
