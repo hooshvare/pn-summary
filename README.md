@@ -279,12 +279,11 @@ Please cite the following paper in your publication if you are using our [datase
 
 ```bibtext
 @article{pnSummary,
-  title={Leveraging ParsBERT and Pretrained mT5 for Persian Abstractive Text Summarization}, 
-  author={Mehrdad Farahani, Mohammad Gharachorloo, Mohammad Manthouri},
-  year={2020},
-  eprint={2012.11204},
-  archivePrefix={arXiv},
-  primaryClass={cs.CL}
+  title={Leveraging ParsBERT and Pretrained mT5 for Persian Abstractive Text Summarization},
+  author={Mehrdad Farahani and Mohammad Gharachorloo and M. Manthouri},
+  journal={2021 26th International Computer Conference, Computer Society of Iran (CSICC)},
+  year={2021},
+  pages={1-6}
 }
 ```
 
