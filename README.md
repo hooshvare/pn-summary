@@ -232,12 +232,12 @@ The models proposed to be used for Persian summary generation in our work are [m
 </p>
 <div align="center">
 
-|     Models     | ROUGE-1 | ROUGE-2 | ROUGE-L |
-|:--------------:|:-------:|:-------:|:-------:|
-|    mT5-small   |  42.87  |  25.04  |  36.82  |
-|    mT5-base    |  45.91  |  27.84  |  39.90  |
-|   BERTSharing  |  43.97  |  25.18  |  37.64  |
-| RoBERTaSharing |  00.00  |  00.00  |  00.00  |
+|           Models          | ROUGE-1 | ROUGE-2 | ROUGE-L |
+|:-------------------------:|:-------:|:-------:|:-------:|
+|         mT5-small         |  42.87  |  25.04  |  36.82  |
+|          mT5-base         |  45.91  |  27.84  |  39.90  |
+| BERTSharing (ParsBERT v3) |  43.97  |  25.18  |  37.64  |
+|       RoBERTaSharing      |  00.00  |  00.00  |  00.00  |
 
 </div>
 
