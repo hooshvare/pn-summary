@@ -4,8 +4,8 @@
 
 A well-structured summarization dataset for the Persian language consists of 93,207 records. It is prepared for Abstractive/Extractive tasks (like [cnn_dailymail](https://cs.nyu.edu/~kcho/DMQA/) for English). It can also be used in other scopes like Text Generation, Title Generation, and News Category Classification. Moreover, we tested out this dataset on novel models and techniques.
 
-- mT5: A pretrained encoder-decoder model
-- BERT2BERT: A leveraging ParsBERT model as an encoder-decoder architecture.
+- mT5: A pretrained encoder-decoder model [[pn-summary-mt5-base](https://huggingface.co/HooshvareLab/pn-summary-mt5-base), [pn-summary-mt5-small](https://huggingface.co/HooshvareLab/pn-summary-mt5-small)]
+- BERT2BERT: A leveraging ParsBERT model as an encoder-decoder architecture [[pn-summary-b2b-shared](https://huggingface.co/HooshvareLab/pn-summary-b2b-shared)]
 
 Follow the rest of the repo for more detail.
 
